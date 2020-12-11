@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function ubah(){
+            let Nilai = Number(document.getElementById("money").value);
+            let pilihan = document.getElementById("pilih").value;
+            let dl = Number("9915");
+            let dlsg = Number("13472");
+            let rm = Number("874");
+            let yj = Number("120");
+            let eu = Number("15888");
+            let ras = Number("3592");
+            if (isNaN(Nilai)) {
+                alert('isi form dengan angka!');
+            }else{
+                if (pilihan == "1"){
+                    hasil = Nilai * dl;
+                    document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                }
+                    if (pilihan == "2"){
+                        hasil = Nilai * dlsg;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                        if (pilihan == "3"){
+                            hasil = Nilai * rm;
+                            document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                        }
+                            if (pilihan == "4"){
+                                hasil = Nilai * yj;
+                                document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                            }
+                                if (pilihan == "5"){
+                                    hasil = Nilai * eu;
+                                    document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                                }
+                                    if (pilihan == "6"){
+                                        hasil = Nilai * ras;
+                                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                                    }
+            }
+        }
+    </script>
+    <style>
+        .yow {
+            background-color: coral;
+        }
+        .yoo {
+            background-color: rgb(223, 106, 64);
+        }
+    </style>
+</head>
+<body align="center">
+<div class="yow">
+ <h1>Konversi Mata Uang</h1>
+</div>
+ <hr size="5px" width="20%" align="center" color="black">
+ <div class="yoo">
+ <table align="center">
+    <tr>
+        <td><input type="text" id="money" placeholder="Masukan Nilai"></td>
+    </tr>
+    <tr>
+        <td>
+            <br>
+            <label>Silahkan Pilih Mata Uang</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <select id="pilih">
+                 <option value="0">Silahkan Pilih Mata Uang</option>
+                 <option value="1">Dollar Us</option>
+                 <option value="2">Dollar Singapore</option>
+                 <option value="3">Ringgit Malaysia</option>
+                 <option value="4">Yen Jepang</option>
+                 <option value="5">Riyal Arab Saudi</option>
+                 <option value="6">Euro</option>
+             </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="convert" name="convert" onclick="ubah()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p id="hasil"><input type="text" id="money" placeholder="hasil" disabled></p>
+        </td>
+</table>
+</div>
+</body>
+</html>
